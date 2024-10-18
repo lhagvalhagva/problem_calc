@@ -1,0 +1,25 @@
+body {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#output {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.output_correct {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

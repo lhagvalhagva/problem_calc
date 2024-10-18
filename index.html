@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate and Download Expressions</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Бодлого үүсгэгч</h1>
+
+      <div id="input-section" class="mb-4 p-3 bg-white rounded shadow">
+        <label for="inputNumber">Хэдэн ширхэг бодлого вэ:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputNumber"
+          placeholder="Жишээ нь: 10"
+        />
+
+        <label for="inputStructure" class="mt-2">Бодлогын бүтэц</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputStructure"
+          placeholder="Жишээ нь: (2*2+3)"
+        />
+        <br />
+        <button class="btn btn-primary" onclick="generateExpressions()">
+          Бодлого тооцоолох
+        </button>
+      </div>
+
+      <div id="expressions-section" class="mb-4 p-3 bg-white rounded shadow">
+        <h2>Бодлогууд:</h2>
+        <div id="output" class="bg-light p-2 rounded mb-3"></div>
+        <pre class="output_correct" id="correctAnswersOutput"></pre>
+        <button
+          id="showAnswersBtn"
+          class="btn btn-info"
+          style="display: none"
+          onclick="showAnswers()"
+        >
+          Бодлогын хариу харах
+        </button>
+      </div>
+
+      <div
+        id="download-options"
+        class="mb-4 p-3 bg-white rounded shadow"
+        style="display: none"
+      >
+        <h3>Бодлого татах:</h3>
+        <label>
+          <input type="checkbox" id="includeAnswers" checked />
+          Зөв хариутай татах
+        </label>
+        <button class="btn btn-success" onclick="downloadFiles()">
+          Бодлого татах
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
